@@ -1,0 +1,11 @@
+package com.yatish;
+
+import com.yatish.view.EmployeeView;
+
+public class MainApp {
+	public static void main(String[] args) {
+		System.out.println("Start the App");
+		new EmployeeView();
+		System.out.println("End the App");
+	}
+}

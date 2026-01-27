@@ -1,0 +1,19 @@
+package com.yatish.service;
+
+import com.yatish.models.Employee;
+
+public class EmployeeService {
+	static Employee[] employeeData=new Employee[50];
+	static int count=0;
+	
+ 	public EmployeeService(Employee[] employee) {
+		for(int i=0;i<employee.length;i++) {
+			if(employee!=null) {
+				employeeData[count++]=employee[i];
+			}
+		}
+	}
+	public void addEmployeeService() {
+		
+	}
+}

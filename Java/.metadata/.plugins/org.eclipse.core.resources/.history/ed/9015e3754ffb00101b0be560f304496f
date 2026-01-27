@@ -1,0 +1,39 @@
+package com.yatish.service;
+
+import com.yatish.models.Employee;
+
+public class EmployeeService {
+	static Employee[] employeeData=new Employee[50];
+	static int count=0;
+	
+	static {
+		employeeData[0]=new Employee(1, "Yatish", "Mumbai");
+	}
+ 	public EmployeeService() {
+//		for(int i=0;i<employee.length;i++) {
+//			if(employee!=null) {
+//				employeeData[count++]=employee[i];
+//			}
+//		}
+	}
+	public void addEmployeeService(Employee[] employee) {
+		for(Employee e:employee) {
+			if(e!=null)
+			employeeData[count++]=new Employee(e.getId(), e.getName().toUpperCase(), e.getCity().toUpperCase());
+		}
+		System.out.println("Employee added successfully....");
+	}
+	
+	public void viewEmployees() {
+		for(Employee e:employeeData) {
+			if(e!=null) {
+				System.out.println(
+		                e.getId() + "   " +
+		                e.getName() + "   " +
+		                e.getCity()
+		            );
+			}
+		}
+	}
+	
+}

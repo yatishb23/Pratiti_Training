@@ -1,0 +1,35 @@
+package com.yatish.service;
+
+import com.yatish.DAO.EmployeeDAO;
+import com.yatish.models.Employee;
+
+public class EmployeeService {
+	static EmployeeDAO dao=new EmployeeDAO();
+	static int count=0;
+	
+//	static {
+//		employeeData[0]=new Employee(1, "Yatish", "Mumbai");
+//		count=1;
+//	}
+//	
+ 	public EmployeeService() {
+ 		
+	}
+ 	
+	public void addEmployeeService(Employee[] employee) {
+//		for(Employee e:employee) {
+//			if(e!=null)
+//			employeeData[count++]=new Employee(e.getId(), e.getName().toUpperCase(), e.getCity().toUpperCase());
+//		}
+		System.out.println("Employee added successfully....");
+	}
+	
+	public void viewEmployees() {
+		dao.getEmployees();
+	}
+	
+	public boolean verifyId(int id) {
+		
+	}
+	
+}

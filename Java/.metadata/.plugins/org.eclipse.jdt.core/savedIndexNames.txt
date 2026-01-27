@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+/media/yatish/New Volume/My WorkSpace/Pratiti Training/Java/.metadata/.plugins/org.eclipse.jdt.core
+1865797976.index
+127473599.index
+627481643.index

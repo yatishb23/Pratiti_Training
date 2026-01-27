@@ -1,0 +1,61 @@
+package com.yatish.view;
+
+import java.util.Scanner;
+
+import com.yatish.models.Employee;
+
+public class EmployeeView {
+	Scanner sc=new Scanner(System.in);
+	
+	static final Employee[] employees=new Employee[50]; 
+	public EmployeeView() {
+		
+	}
+	private void employeeOptions() {
+		System.out.println("==== Employee Qptions ====");
+		System.out.println("1. Add Employee");
+		System.out.println("2. View Employees");
+		System.out.println("5. Exit");
+		System.out.println("Enter choice..... ");
+		int choice=sc.nextInt();
+		selectedOption(choice);
+	}
+	private void selectedOption(int choice) {
+		switch (choice) {
+		case 1: {
+			addEmployee();
+			break;
+		}
+		case 2:
+			viewEmployees();
+			break;
+		case 5:
+			exitEmployee();
+			break;
+		default:
+			break;
+		}
+	}
+	private void exitEmployee() {
+		sc.close();
+		System.exit(0);
+	}
+	private void addEmployee() {
+		System.out.println("Enter Employee Id: ");
+		int id = sc.nextInt();
+		
+		System.out.println("Enter Employee Name: ");
+		String name=sc.nextLine();
+		
+		System.out.println("Enter Employee City: ");
+		String city=sc.nextLine();
+		
+		var a=new Employee(id, name, city);
+	}
+	private void viewEmployees() {
+		for(int i=0;i<employees.length;i++) {
+			if(employees[i]==null) break;
+			System.out.println(employees[i].toString());
+		}
+	}
+}

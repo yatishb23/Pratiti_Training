@@ -1,0 +1,25 @@
+package com.yatish.service;
+
+import com.yatish.DAO.EmployeeDAO;
+import com.yatish.models.Employee;
+
+public class EmployeeService {
+	static EmployeeDAO dao=new EmployeeDAO();
+
+ 	public EmployeeService() {
+ 		
+	}
+ 	
+	public void addEmployeeService(Employee[] employee) {
+		System.out.println("Employee added successfully....");
+	}
+	
+	public void viewEmployees() {
+		dao.getEmployees();
+	}
+	
+	public boolean verifyId(int id) {
+		return dao.checkId(id);
+	}
+	
+}

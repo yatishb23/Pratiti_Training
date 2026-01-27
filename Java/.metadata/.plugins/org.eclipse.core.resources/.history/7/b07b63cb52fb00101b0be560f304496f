@@ -1,0 +1,17 @@
+package com.yatish.DAO;
+
+import com.yatish.models.Employee;
+
+public class EmployeeDAO {
+	static Employee[] employees=new Employee[50];
+	
+	public EmployeeDAO() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Employee[] getEmployees() {
+		return employees;
+	}
+	
+	public boolean[] getEmploye
+}

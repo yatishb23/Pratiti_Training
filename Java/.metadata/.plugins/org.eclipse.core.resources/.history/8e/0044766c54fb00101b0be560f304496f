@@ -1,0 +1,34 @@
+package com.yatish.DAO;
+
+import com.yatish.models.Employee;
+
+public class EmployeeDAO {
+	static Employee[] employees=new Employee[50];
+	static int count=0;
+	static {
+		employees[0]=new Employee(1, "Yatish", "Mumbai");
+		count=1;
+	}
+	public EmployeeDAO() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Employee[] getEmployees() {
+		return employees;
+	}
+	
+	public boolean checkId(int id) {
+		for(Employee e:employees) {
+			if(e!=null && e.getId()==id) {
+				return true;
+			}
+		}
+		return false;
+	}
+	public void addEmployee(Employee[] data) {
+		for(Employee e:data) {
+			employees[count]=new Employee(e.getId(), e.getName(), e.getCity());
+			count++;
+		}
+	}
+}

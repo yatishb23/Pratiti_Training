@@ -1,0 +1,20 @@
+package com.yatish;
+
+import java.util.logging.Logger;
+import com.yatish.view.EmployeeView;
+
+public class MainApp {
+
+    static Logger log = Logger.getLogger(MainApp.class.getName());
+
+    public static void main(String[] args) {
+
+        System.out.println("Start the App");
+        log.info("Application is starting");
+
+        new EmployeeView();
+
+        System.out.println("End the App");
+        log.info("Application ended");
+    }
+}

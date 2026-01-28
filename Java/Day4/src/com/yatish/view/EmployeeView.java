@@ -18,6 +18,7 @@ public class EmployeeView {
 			System.out.println("1. Add Employee");
 			System.out.println("2. View Employees");
 			System.out.println("3. Update Employee");
+			System.out.println("4. Delete Employee");
 			System.out.println("5. Exit");
 			System.out.println("Enter choice..... ");
 			int choice=sc.nextInt();
@@ -38,6 +39,9 @@ public class EmployeeView {
 		case 3:
 			updateEmployee();
 			employeeOptions();
+		case 4:
+			deleteEmployee();
+			employeeOptions();
 		case 5:
 			exitEmployee();
 			break;
@@ -47,6 +51,19 @@ public class EmployeeView {
 		}
 	}
 	
+	private void deleteEmployee() {
+		while(true) {
+			System.out.println("Enter employee ID: ");
+			int id=sc.nextInt();
+			
+			if(service.verifyId(id)) {
+				service.deleteEmployee(id);
+				break;
+			}
+			System.out.println("Invalid ID please try again...");
+		}
+	}
+
 	private void updateEmployee() {
 		while(true) {
 			System.out.println("Enter employee ID: ");
@@ -137,3 +154,5 @@ public class EmployeeView {
 		service.viewEmployees();
 	}
 }
+
+

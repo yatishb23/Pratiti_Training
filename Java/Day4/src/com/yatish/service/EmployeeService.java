@@ -36,4 +36,7 @@ public class EmployeeService {
 	public void updateBoth(int id,String name,String city) {
 		dao.updateEmployee(id, name, city);
 	}
+	public void deleteEmployee(int id) {
+		dao.deleteEmployee(id);
+	}
 }

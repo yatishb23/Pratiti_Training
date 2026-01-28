@@ -41,6 +41,7 @@ public class EmployeeDAO {
 			}
 		}
 	}
+	
 	public void updateEmployeeCity(int id, String city) {
 		for(Employee e: employees) {
 			if(e!=null && e.getId()==id) {
@@ -49,6 +50,7 @@ public class EmployeeDAO {
 			}
 		}
 	}
+	
 	public void updateEmployee(int id,String name, String city) {
 		for(Employee e: employees) {
 			if(e!=null && e.getId()==id) {
@@ -57,5 +59,18 @@ public class EmployeeDAO {
 				break;
 			}
 		}
+	}
+	public void deleteEmployee(int id) {
+		int count=0;
+		for(Employee e: employees) {
+			if(e!=null && e.getId()==id) {
+				for(int i=count;i<employees.length-1;i++) {
+					employees[i]=employees[i+1];
+				}
+				break;
+			}
+			count++;
+		}
+		System.out.println("Employee deleted successfully");
 	}
 }

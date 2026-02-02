@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.yatish.entity.EmployeeEntity">
+    <class name="EmployeeEntity" table="employee_table1">
+    <id name="empid" column="EMPID" type="int">
+        <!-- <column name="EMPID" sql-type="VARCHAR(64)"/> -->
+        <generator class="assigned"/>
+    </id>
+    <property name="empName" column="NAME" type="java.lang.String"/>
+    <!-- <property name="lastName" column="LAST_NAME" type="java.lang.String"/>
+    <property name="salary" column="SALARY" type="int"/> -->
+    </class>
+</hibernate-mapping>

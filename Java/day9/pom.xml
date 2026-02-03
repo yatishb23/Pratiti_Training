@@ -5,16 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.yatish</groupId>
-    <artifactId>day8</artifactId>
+    <artifactId>day9</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
-        <maven.compiler.release>21</maven.compiler.release>
-        <junit.jupiter.version>5.10.2</junit.jupiter.version>
+        <maven.compiler.release>17</maven.compiler.release>
     </properties>
-
     <dependencies>
         <dependency>
             <groupId>com.mysql</groupId>
@@ -41,9 +37,26 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
-            <version>${junit.jupiter.version}</version>
+            <version>5.10.0</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-api</artifactId>
+        <version>2.22.1</version>
+    </dependency>
+
+    <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-core</artifactId>
+        <version>2.22.1</version>
+    </dependency>
+
+    <dependency>
+    <groupId>org.modelmapper</groupId>
+    <artifactId>modelmapper</artifactId>
+    <version>3.2.0</version>
+</dependency>
 
     </dependencies>
     <build>
@@ -51,7 +64,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.1.2</version>`
+                <version>3.1.2</version>
             </plugin>
         </plugins>
     </build>
